@@ -5,16 +5,28 @@
     "sourceMap": true,
     "declaration": false,
     "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "importHelpers": true,
     "target": "es2015",
     "module": "esnext",
-    "lib": ["es2017", "dom"],
+    "lib": ["es2019", "dom", "esnext.asynciterable"],
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitReturns": true,
+    "noUncheckedIndexedAccess": true,
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@cf/shared/ui-icons": ["libs/shared/ui-icons/src/index.ts"],
+      "@cf/shared/util-context-menu": ["libs/shared/util-context-menu/src/index.ts"],
+      "@cf/shared/util-dom-events": ["libs/shared/util-dom-events/src/index.ts"],
+      "@cf/shared/util-fp": ["libs/shared/util-fp/src/index.ts"],
+      "@cf/shared/util-types": ["libs/shared/util-types/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

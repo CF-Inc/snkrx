@@ -1,0 +1,100 @@
+{
+  "root": true,
+  "ignorePatterns": ["**/*"],
+  "plugins": ["@nrwl/nx"],
+  "overrides": [
+    {
+      "extends": ["suiyobi/import-order"],
+      "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
+      "rules": {
+        "@nrwl/nx/enforce-module-boundaries": [
+          "error",
+          {
+            "enforceBuildableLibDependency": true,
+            "allow": [],
+            "depConstraints": [
+              {
+                "sourceTag": "*",
+                "onlyDependOnLibsWithTags": ["*"]
+              },
+              {
+                "sourceTag": "type:api",
+                "onlyDependOnLibsWithTags": ["type:ui", "type:domain-logic", "type:util"]
+              },
+              {
+                "sourceTag": "type:feature",
+                "onlyDependOnLibsWithTags": ["type:ui", "type:domain-logic", "type:util"]
+              },
+              {
+                "sourceTag": "type:ui",
+                "onlyDependOnLibsWithTags": ["type:domain-logic", "type:util"]
+              },
+              {
+                "sourceTag": "type:domain-logic",
+                "onlyDependOnLibsWithTags": ["type:util"]
+              },
+              {
+                "sourceTag": "domain:shared",
+                "onlyDependOnLibsWithTags": ["domain:shared", "domain:shared"]
+              }
+            ]
+          }
+        ],
+        "import/order": [
+          "warn",
+          {
+            "alphabetize": {
+              "order": "asc",
+              "caseInsensitive": false
+            },
+            "groups": [["external", "builtin"], "internal", "parent", "sibling"],
+            "newlines-between": "always",
+            "pathGroups": [
+              {
+                "group": "external",
+                "pattern": "{@cf/shared/**,}",
+                "position": "before"
+              },
+              {
+                "group": "external",
+                "pattern": "{@cf/**,}",
+                "position": "before"
+              },
+              {
+                "group": "external",
+                "pattern": "{@rx-angular/**,@angular/!(core|platform-browser|platform-browser-dynamic),@angular/!(core|platform-browser|platform-browser-dynamic)/**,@nestjs/!(core|common|graphql|testing),@nestjs/!(core|common|graphql|testing)/**,react-*,@vue/**}",
+                "position": "before"
+              },
+              {
+                "group": "external",
+                "pattern": "{@angular/core,@angular/platform-browser,@angular/platform-browser-dynamic,@angular/core/**,@angular/platform-browser/**,@angular/platform-browser-dynamic/**,@nestjs/core,@nestjs/common,@nestjs/graphql,@nestjs/testing,react,react-native,react-*,vue,@ngneat/spectator,@ngneat/spectator/**}",
+                "position": "before"
+              }
+            ],
+            "pathGroupsExcludedImportTypes": ["react"]
+          }
+        ]
+      }
+    },
+    {
+      "files": ["*.ts", "*.tsx"],
+      "extends": ["suiyobi/typescript"],
+      "rules": {}
+    },
+    {
+      "files": ["*.js", "*.jsx"],
+      "extends": ["suiyobi/javascript"],
+      "rules": {}
+    },
+    {
+      "files": ["jest.config.js"],
+      "extends": ["suiyobi/node"],
+      "rules": {}
+    },
+    {
+      "files": ["*.spec.ts", "*.spec.js"],
+      "extends": ["suiyobi/jest"],
+      "rules": {}
+    }
+  ]
+}

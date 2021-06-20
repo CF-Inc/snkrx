@@ -1,0 +1,16 @@
+{
+  "cSpell.words": [
+    "Runtype",
+    "autosize",
+    "funtypes",
+    "grpc",
+    "lifeomic",
+    "protobuf",
+    "readonly",
+    "storyboarding",
+    "subschemas",
+    "textinput",
+    "unpatch"
+  ],
+  "typescript.tsdk": "node_modules/typescript/lib"
+}

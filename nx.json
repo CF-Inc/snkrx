@@ -1,7 +1,7 @@
 {
   "npmScope": "cf",
   "affected": {
-    "defaultBase": "master"
+    "defaultBase": "main"
   },
   "implicitDependencies": {
     "package.json": {
@@ -14,14 +14,25 @@
     "default": {
       "runner": "@nrwl/workspace/tasks-runners/default",
       "options": {
-        "cacheableOperations": [
-          "build",
-          "lint",
-          "test",
-          "e2e"
-        ]
+        "cacheableOperations": ["build", "lint", "test", "e2e"]
       }
     }
   },
-  "projects": {}
+  "projects": {
+    "shared-ui-icons": {
+      "tags": ["domain:shared", "type:ui"]
+    },
+    "shared-util-context-menu": {
+      "tags": ["domain:shared", "type:util"]
+    },
+    "shared-util-dom-events": {
+      "tags": ["domain:shared", "type:util"]
+    },
+    "shared-util-fp": {
+      "tags": ["domain:shared", "type:util"]
+    },
+    "shared-util-types": {
+      "tags": ["domain:shared", "type:util"]
+    }
+  }
 }

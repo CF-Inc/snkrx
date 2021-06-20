@@ -2,3 +2,6 @@
 
 /dist
 /coverage
+
+# Do not format generated files
+*.generated.ts
