@@ -31,6 +31,9 @@ jobs:
             ${{ runner.os }}-build-
             ${{ runner.os }}-
 
+      - name: Install NPM v7
+        run: npm install -g npm@7
+
       - name: Install Dependencies
         run: npm install --frozen-lockfile
 
