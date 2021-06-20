@@ -4,5 +4,6 @@ module.exports = {
     '<rootDir>/libs/shared/util-context-menu',
     '<rootDir>/libs/shared/ui-icons',
     '<rootDir>/libs/shared/util-fp',
+    '<rootDir>/apps/snkrx',
   ],
 };

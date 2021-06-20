@@ -31,6 +31,7 @@ specifiers:
   '@nestjs/schematics': ^7.3.1
   '@nestjs/testing': ^7.6.18
   '@ngneat/reactive-forms': ^1.7.3
+  '@ngneat/spectator': ^7.2.0
   '@ngrx/component-store': ^12.1.0
   '@ngrx/effects': ^12.1.0
   '@ngrx/entity': ^12.1.0
@@ -64,6 +65,7 @@ specifiers:
   eslint: 7.29.0
   eslint-config-prettier: 8.3.0
   eslint-config-suiyobi: ^0.1.57
+  eslint-plugin-cypress: ^2.11.3
   fp-ts: ^2.10.5
   funtypes: ^4.1.0
   husky: ^6.0.0
@@ -141,6 +143,7 @@ devDependencies:
   '@commitlint/types': 12.1.4
   '@nestjs/schematics': 7.3.1_typescript@4.2.4
   '@nestjs/testing': 7.6.18_9cd0f963ae6f35bf288217e4f1c45cb4
+  '@ngneat/spectator': 7.2.0_c1e849f7d94a8f5dcb2b5a7695b7138a
   '@ngrx/schematics': 12.1.0
   '@nrwl/cli': 12.4.0
   '@nrwl/cypress': 12.4.0_4592c50c48852e6b69c31f5dade74163
@@ -161,6 +164,7 @@ devDependencies:
   eslint: 7.29.0
   eslint-config-prettier: 8.3.0_eslint@7.29.0
   eslint-config-suiyobi: 0.1.57_9c60e989cb977d6c5d013d525c48eb65
+  eslint-plugin-cypress: 2.11.3_eslint@7.29.0
   husky: 6.0.0
   jest: 27.0.4_ts-node@10.0.0
   jest-preset-angular: 9.0.4_44ad6b7e587080a1e0ae57a9dec0acfa
@@ -3241,6 +3245,25 @@ packages:
       tslib: 2.2.0
     dev: false
 
+  /@ngneat/spectator/7.2.0_c1e849f7d94a8f5dcb2b5a7695b7138a:
+    resolution: {integrity: sha512-FUdQqXCQEBwxAX33ZbU7h25cMKT24kesIX8ggiSHfGyyAJbYSJwZkzWLLpLgJqSQcPbe1dLCxCGA6tpIkGF9rg==}
+    hasBin: true
+    peerDependencies:
+      '@angular/common': '>= 10.1.0'
+      '@angular/core': '>= 10.1.0'
+      '@angular/router': '>= 10.1.0'
+      typescript: '>= 2.8.0'
+    dependencies:
+      '@angular/common': 12.0.5_@angular+core@12.0.5+rxjs@6.6.7
+      '@angular/core': 12.0.5_rxjs@6.6.7+zone.js@0.11.4
+      '@angular/router': 12.0.5_9cdddb01c18264562f3c401f74fddad4
+      '@testing-library/dom': 7.26.5
+      jquery: 3.6.0
+      replace-in-file: 6.2.0
+      tslib: 2.3.0
+      typescript: 4.2.4
+    dev: true
+
   /@ngrx/component-store/12.1.0_@angular+core@12.0.5+rxjs@6.6.7:
     resolution: {integrity: sha512-KhFaEqW1Jgj2Aw/SVFbjGH1JTcdnH0OUbi3+xwKYZRHtidKoey9vswH111jV/YiROM68SJCMigWdSbsRi5cp3Q==}
     peerDependencies:
@@ -3781,6 +3804,20 @@ packages:
     resolution: {integrity: sha512-iQADsW4LBMISqZ6Ci1dupJL9pprqwcVFTcOsEmQOEhW+KLCVn/Y4Jrvg2k19fIHCp+iFprriYPTdRcQR8NbUPg==}
     dependencies:
       '@sinonjs/commons': 1.8.3
+    dev: true
+
+  /@testing-library/dom/7.26.5:
+    resolution: {integrity: sha512-2v/fv0s4keQjJIcD4bjfJMFtvxz5icartxUWdIZVNJR539WD9oxVrvIAPw+3Ydg4RLgxt0rvQx3L9cAjCci0Kg==}
+    engines: {node: '>=10'}
+    dependencies:
+      '@babel/code-frame': 7.14.5
+      '@babel/runtime': 7.14.6
+      '@types/aria-query': 4.2.1
+      aria-query: 4.2.2
+      chalk: 4.1.1
+      dom-accessibility-api: 0.5.6
+      lz-string: 1.4.4
+      pretty-format: 26.6.2
     dev: true
 
   /@testing-library/dom/7.31.2:
@@ -10343,6 +10380,10 @@ packages:
       - utf-8-validate
     dev: true
 
+  /jquery/3.6.0:
+    resolution: {integrity: sha512-JVzAR/AjBvVt2BmYhxRCSYysDsPcssdmTFnzyLEts9qNwmjmu4JTAMYubEfwVOSwpQ1I1sKKFcxhZCI2buerfw==}
+    dev: true
+
   /js-tokens/3.0.2:
     resolution: {integrity: sha1-mGbfOVECEw449/mWvOtlRDIJwls=}
 
@@ -13976,6 +14017,16 @@ packages:
   /repeat-string/1.6.1:
     resolution: {integrity: sha1-jcrkcOHIirwtYA//Sndihtp15jc=}
     engines: {node: '>=0.10'}
+
+  /replace-in-file/6.2.0:
+    resolution: {integrity: sha512-Im2AF9G/qgkYneOc9QwWwUS/efyyonTUBvzXS2VXuxPawE5yQIjT/e6x4CTijO0Quq48lfAujuo+S89RR2TP2Q==}
+    engines: {node: '>=10'}
+    hasBin: true
+    dependencies:
+      chalk: 4.1.1
+      glob: 7.1.7
+      yargs: 16.2.0
+    dev: true
 
   /req-all/0.1.0:
     resolution: {integrity: sha1-EwBR4qzligLqy/ydRIV3pzapJzo=}

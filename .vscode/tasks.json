@@ -2,28 +2,22 @@
   "version": "2.0.0",
   "tasks": [
     {
-      "label": "Start dependencies",
-      "type": "docker-compose",
-      "dockerCompose": {
-        "up": {
-          "detached": true,
-          "build": true
-        },
-        "files": ["${workspaceFolder}/docker-compose.yml"]
-      },
-      "presentation": {
-        "echo": false,
-        "reveal": "silent",
-        "focus": false,
-        "panel": "shared",
-        "showReuseMessage": false,
-        "clear": true
+      "label": "Build snkrx",
+      "type": "angularcli",
+      "option": "build",
+      "args": ["snkrx"],
+      "angular": "cf",
+      "problemMatcher": ["$tsc-angular-cli"],
+      "group": {
+        "kind": "build",
+        "isDefault": true
       }
     },
     {
-      "label": "Start builder",
+      "label": "Start snkrx",
       "type": "angularcli",
       "option": "serve",
+      "args": ["snkrx"],
       "problemMatcher": [
         "$tsc-angular-cli-watch",
         {
@@ -46,7 +40,7 @@
       }
     },
     {
-      "label": "Stop builder",
+      "label": "Stop all",
       "command": "echo ${input:terminate}",
       "type": "shell",
       "problemMatcher": []

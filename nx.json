@@ -33,6 +33,13 @@
     },
     "shared-util-types": {
       "tags": ["domain:shared", "type:util"]
+    },
+    "snkrx": {
+      "tags": []
+    },
+    "snkrx-e2e": {
+      "tags": [],
+      "implicitDependencies": ["snkrx"]
     }
   }
 }

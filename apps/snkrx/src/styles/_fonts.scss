@@ -1,0 +1,122 @@
+@use '@angular/material' as mat;
+
+$display-4-level: mat.define-typography-level(
+  $font-weight: 400,
+  $font-size: 2.6rem,
+  $line-height: 3.2,
+  $letter-spacing: 0.02em,
+  $font-family: 'Fat Pixel',
+);
+
+$display-3-level: mat.define-typography-level(
+  $font-weight: 400,
+  $font-size: 2.2rem,
+  $line-height: 3.2,
+  $letter-spacing: 0.02em,
+  $font-family: 'Fat Pixel',
+);
+
+$display-2-level: mat.define-typography-level(
+  $font-weight: 400,
+  $font-size: 1.8rem,
+  $line-height: 3.2,
+  $letter-spacing: 0.02em,
+  $font-family: 'Fat Pixel',
+);
+
+$display-1-level: mat.define-typography-level(
+  $font-weight: 400,
+  $font-size: 1.6rem,
+  $line-height: 3.2,
+  $letter-spacing: 0.02em,
+  $font-family: 'Fat Pixel',
+);
+
+$headline-level: mat.define-typography-level(
+  $font-weight: 400,
+  $font-size: 1.3rem,
+  $line-height: 2.8,
+  $letter-spacing: 0.02em,
+  $font-family: 'Fat Pixel',
+);
+
+$title-level: mat.define-typography-level(
+  $font-weight: 500,
+  $font-size: 1.2rem,
+  $line-height: 2.4,
+  $letter-spacing: normal,
+  $font-family: 'Fat Pixel',
+);
+
+$subheading-2-level: mat.define-typography-level(
+  $font-weight: 400,
+  $font-size: 1.1rem,
+  $line-height: 2.4,
+  $letter-spacing: normal,
+  $font-family: 'Fat Pixel',
+);
+
+$subheading-1-level: mat.define-typography-level(
+  $font-weight: 400,
+  $font-size: 1.6rem,
+  $line-height: 2,
+  $letter-spacing: normal,
+  $font-family: 'Pixul Brush',
+);
+
+$body-1-level: mat.define-typography-level(
+  $font-weight: 400,
+  $font-size: 1.4rem,
+  $line-height: 2,
+  $letter-spacing: normal,
+  $font-family: 'Pixul Brush',
+);
+
+$body-2-level: mat.define-typography-level(
+  $font-weight: 500,
+  $font-size: 1.4rem,
+  $line-height: 2,
+  $letter-spacing: normal,
+  $font-family: 'Pixul Brush',
+);
+
+$button-level: mat.define-typography-level(
+  $font-weight: 500,
+  $font-size: 1.4rem,
+  $line-height: 2,
+  $letter-spacing: normal,
+  $font-family: 'Pixul Brush',
+);
+
+$caption-level: mat.define-typography-level(
+  $font-weight: 500,
+  $font-size: 1.2rem,
+  $line-height: 1.8,
+  $letter-spacing: 0.5px,
+  $font-family: 'Pixul Brush',
+);
+
+$input-level: mat.define-typography-level(
+  $font-weight: 400,
+  $font-size: 1.1rem,
+  $line-height: 2,
+  $letter-spacing: 0.5px,
+  $font-family: 'Pixul Brush',
+);
+
+$snkrx-typography: mat.define-typography-config(
+  $display-4: $display-4-level,
+  $display-3: $display-3-level,
+  $display-2: $display-2-level,
+  $display-1: $display-1-level,
+  $headline: $headline-level,
+  $title: $title-level,
+  $subheading-2: $subheading-2-level,
+  $subheading-1: $subheading-1-level,
+  $body-1: $body-1-level,
+  $body-2: $body-2-level,
+  $caption: $caption-level,
+  $button: $button-level,
+  $input: $input-level,
+  $font-family: 'Fat Pixel',
+);
