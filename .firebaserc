@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "snkrx-cd3e5": {
+      "hosting": {
+        "snkrx": [
+          "snkrx-cd3e5"
+        ]
+      }
+    }
+  }
+}
