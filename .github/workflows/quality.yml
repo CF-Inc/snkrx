@@ -51,5 +51,5 @@ jobs:
       - name: Upload E2E Artifacts
         uses: actions/upload-artifact@v2
         with:
-          name: code-coverage-report
+          name: e2e-test-results
           path: dist/cypress/apps/snkrx-e2e/**/*
