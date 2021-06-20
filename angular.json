@@ -4,6 +4,7 @@
     "defaultCollection": "@nrwl/angular",
     "packageManager": "pnpm"
   },
+  "defaultProject": "snkrx",
   "schematics": {
     "@nrwl/angular": {
       "application": {
@@ -255,7 +256,11 @@
             "polyfills": "apps/snkrx/src/polyfills.ts",
             "tsConfig": "apps/snkrx/tsconfig.app.json",
             "inlineStyleLanguage": "scss",
-            "assets": ["apps/snkrx/src/favicon.ico", "apps/snkrx/src/assets"],
+            "assets": [
+              "apps/snkrx/src/favicon.ico",
+              "apps/snkrx/src/robots.txt",
+              "apps/snkrx/src/assets"
+            ],
             "styles": ["apps/snkrx/src/styles.scss"],
             "scripts": []
           },
@@ -323,6 +328,10 @@
             "jestConfig": "apps/snkrx/jest.config.js",
             "passWithNoTests": true
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {}
         }
       }
     },
