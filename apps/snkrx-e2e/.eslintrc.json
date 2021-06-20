@@ -1,0 +1,22 @@
+{
+  "extends": ["../../.eslintrc.json"],
+  "ignorePatterns": ["!**/*"],
+  "overrides": [
+    {
+      "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
+      "extends": ["suiyobi/cypress"],
+      "parserOptions": {
+        "project": "apps/builder-e2e/tsconfig.*?.json"
+      },
+      "rules": {}
+    },
+    {
+      "files": ["src/plugins/index.js"],
+      "extends": ["suiyobi/cypress"],
+      "rules": {
+        "@typescript-eslint/no-var-requires": "off",
+        "no-undef": "off"
+      }
+    }
+  ]
+}

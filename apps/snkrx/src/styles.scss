@@ -1,0 +1,18 @@
+@use 'modern-normalize';
+@use '@angular/material' as mat;
+
+@use './styles/fonts' as fonts;
+@use './styles/theme' as theme;
+
+@include mat.core(fonts.$snkrx-typography);
+@include mat.core-theme(theme.$snkrx-theme);
+
+html,
+body {
+  font-size: 10px;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+}

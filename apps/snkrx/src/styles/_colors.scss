@@ -1,0 +1,208 @@
+@use '@angular/material' as mat;
+
+$dark-primary-text: rgba(black, 0.87);
+$light-primary-text: white;
+
+$snkrx-yellow-palette: (
+  50: #fffce5,
+  100: #fef7be,
+  200: #fdf193,
+  300: #fceb66,
+  400: #fbe63f,
+  500: #f8e100,
+  600: #facf00,
+  700: #f9b800,
+  800: #f89f00,
+  900: #f67300,
+  contrast: (
+    50: $dark-primary-text,
+    100: $dark-primary-text,
+    200: $dark-primary-text,
+    300: $dark-primary-text,
+    400: $dark-primary-text,
+    500: $dark-primary-text,
+    600: $dark-primary-text,
+    700: $light-primary-text,
+    800: $light-primary-text,
+    900: $light-primary-text,
+  ),
+);
+
+$snkrx-orange-palette: (
+  50: #fef7e1,
+  100: #fcebb4,
+  200: #fade83,
+  300: #f8d252,
+  400: #f7c62f,
+  500: #f6bd19,
+  600: #f5af13,
+  700: #f59f10,
+  800: #f48d0e,
+  900: #f36f0a,
+  contrast: (
+    50: $dark-primary-text,
+    100: $dark-primary-text,
+    200: $dark-primary-text,
+    300: $dark-primary-text,
+    400: $dark-primary-text,
+    500: $dark-primary-text,
+    600: $dark-primary-text,
+    700: $light-primary-text,
+    800: $light-primary-text,
+    900: $light-primary-text,
+  ),
+);
+
+$snkrx-dark-orange-palette: (
+  50: #fff3e2,
+  100: #ffe1b6,
+  200: #ffcd88,
+  300: #ffb959,
+  400: #ffa93a,
+  500: #ff9b27,
+  600: #fe8f25,
+  700: #f78023,
+  800: #f07021,
+  900: #e5581e,
+  contrast: (
+    50: $dark-primary-text,
+    100: $dark-primary-text,
+    200: $dark-primary-text,
+    300: $dark-primary-text,
+    400: $dark-primary-text,
+    500: $dark-primary-text,
+    600: $dark-primary-text,
+    700: $light-primary-text,
+    800: $light-primary-text,
+    900: $light-primary-text,
+  ),
+);
+
+$snkrx-blue-palette: (
+  50: #e6f2fa,
+  100: #c2def4,
+  200: #9ecbed,
+  300: #7db6e4,
+  400: #68a6df,
+  500: #5898da,
+  600: #508acd,
+  700: #4778ba,
+  800: #3f68a8,
+  900: #324b87,
+  contrast: (
+    50: $dark-primary-text,
+    100: $dark-primary-text,
+    200: $dark-primary-text,
+    300: $dark-primary-text,
+    400: $dark-primary-text,
+    500: $dark-primary-text,
+    600: $dark-primary-text,
+    700: $light-primary-text,
+    800: $light-primary-text,
+    900: $light-primary-text,
+  ),
+);
+
+$snkrx-bright-blue-palette: (
+  50: #e1f5fb,
+  100: #b3e4f6,
+  200: #81d3f0,
+  300: #52c1ea,
+  400: #2fb4e7,
+  500: #0aa7e4,
+  600: #019bd6,
+  700: #0087c3,
+  800: #0076af,
+  900: #00578e,
+  contrast: (
+    50: $dark-primary-text,
+    100: $dark-primary-text,
+    200: $dark-primary-text,
+    300: $dark-primary-text,
+    400: $dark-primary-text,
+    500: $dark-primary-text,
+    600: $dark-primary-text,
+    700: $light-primary-text,
+    800: $light-primary-text,
+    900: $light-primary-text,
+  ),
+);
+
+$snkrx-purple-palette: (
+  50: #eee5f0,
+  100: #d6bfdc,
+  200: #bc96c6,
+  300: #a170af,
+  400: #8e559e,
+  500: #7c3f8d,
+  600: #713b87,
+  700: #61347d,
+  800: #532e72,
+  900: #3b2362,
+  contrast: (
+    50: $dark-primary-text,
+    100: $dark-primary-text,
+    200: $dark-primary-text,
+    300: $dark-primary-text,
+    400: $dark-primary-text,
+    500: $dark-primary-text,
+    600: $dark-primary-text,
+    700: $light-primary-text,
+    800: $light-primary-text,
+    900: $light-primary-text,
+  ),
+);
+
+$snkrx-red-palette: (
+  50: #ffeaef,
+  100: #ffcbd3,
+  200: #f0959c,
+  300: #e76b75,
+  400: #f24453,
+  500: #f82a39,
+  600: #e91d39,
+  700: #d70d32,
+  800: #ca002a,
+  900: #bc001e,
+  contrast: (
+    50: $dark-primary-text,
+    100: $dark-primary-text,
+    200: $dark-primary-text,
+    300: $dark-primary-text,
+    400: $dark-primary-text,
+    500: $dark-primary-text,
+    600: $dark-primary-text,
+    700: $light-primary-text,
+    800: $light-primary-text,
+    900: $light-primary-text,
+  ),
+);
+
+$snkrx-green-palette: (
+  50: #f1f7e8,
+  100: #dcecc5,
+  200: #c5dfa1,
+  300: #add27b,
+  400: #9bc85d,
+  500: #8abf40,
+  600: #7baf38,
+  700: #679b2e,
+  800: #538826,
+  900: #306614,
+  contrast: (
+    50: $dark-primary-text,
+    100: $dark-primary-text,
+    200: $dark-primary-text,
+    300: $dark-primary-text,
+    400: $dark-primary-text,
+    500: $dark-primary-text,
+    600: $dark-primary-text,
+    700: $light-primary-text,
+    800: $light-primary-text,
+    900: $light-primary-text,
+  ),
+);
+
+$snkrx-primary: mat.define-palette($snkrx-yellow-palette, 600, 500, 700);
+$snkrx-accent: mat.define-palette($snkrx-blue-palette, 600, 500, 700, 800);
+$snkrx-warn: mat.define-palette($snkrx-red-palette);

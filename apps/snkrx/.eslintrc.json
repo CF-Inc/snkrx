@@ -1,0 +1,36 @@
+{
+  "extends": ["../../.eslintrc.json"],
+  "ignorePatterns": ["!**/*"],
+  "overrides": [
+    {
+      "files": ["*.ts"],
+      "extends": ["suiyobi/angular"],
+      "parserOptions": {
+        "project": ["apps/snkrx/tsconfig.json", "apps/snkrx/tsconfig.*?.json"]
+      },
+      "rules": {
+        "@angular-eslint/directive-selector": [
+          "error",
+          {
+            "type": "attribute",
+            "prefix": "snkrx",
+            "style": "camelCase"
+          }
+        ],
+        "@angular-eslint/component-selector": [
+          "error",
+          {
+            "type": "element",
+            "prefix": "snkrx",
+            "style": "kebab-case"
+          }
+        ]
+      }
+    },
+    {
+      "files": ["*.html"],
+      "extends": ["suiyobi/angular-template"],
+      "rules": {}
+    }
+  ]
+}
