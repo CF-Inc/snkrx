@@ -6,7 +6,7 @@
       "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
       "extends": ["suiyobi/cypress"],
       "parserOptions": {
-        "project": "apps/builder-e2e/tsconfig.*?.json"
+        "project": "apps/snkrx-e2e/tsconfig.*?.json"
       },
       "rules": {}
     },
