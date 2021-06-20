@@ -1,4 +1,4 @@
-describe('builder', () => {
+describe('snkrx', () => {
   it('should show the title', () => {
     cy.visit('/');
 
