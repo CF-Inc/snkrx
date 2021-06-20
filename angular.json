@@ -259,10 +259,13 @@
             "assets": [
               "apps/snkrx/src/favicon.ico",
               "apps/snkrx/src/robots.txt",
-              "apps/snkrx/src/assets"
+              "apps/snkrx/src/assets",
+              "apps/snkrx/src/manifest.webmanifest"
             ],
             "styles": ["apps/snkrx/src/styles.scss"],
-            "scripts": []
+            "scripts": [],
+            "serviceWorker": true,
+            "ngswConfigPath": "apps/snkrx/ngsw-config.json"
           },
           "configurations": {
             "production": {

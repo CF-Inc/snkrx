@@ -11,6 +11,8 @@ html,
 body {
   font-size: 10px;
   height: 100%;
+  overscroll-behavior-y: none;
+  overscroll-behavior-x: none;
 }
 
 body {
